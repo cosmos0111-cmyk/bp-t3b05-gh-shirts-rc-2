@@ -1,332 +1,330 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <meta name="description" content="공항 셔츠룸 추천 브루탈리즘 블로그. BRO 피셜, 가짜 리뷰는 없다. 인천 셔츠룸 실전 분석. 전화 010-6279-0862">
-    <meta name="keywords" content="공항 셔츠룸, 공항 셔츠룸 추천, 인천 셔츠룸, 셔츠룸 블로그, 셔츠룸 후기, bro 피셜, 셔츠룸 정보, 공항 유흥">
-    <meta property="og:title" content="블로그 · 공항 셔츠룸 추천 BRO 피셜">
-    <meta property="og:description" content="공항 셔츠룸 추천 브루탈리즘 블로그. BRO 피셜, 가짜 리뷰는 없다. 인천 셔츠룸 실전 분석. 전화 010-6279-0862">
-    <meta property="og:url" content="https://airport-review-shirt.hardcoreroom.com/blog.html">
-    <title>블로그 · 공항 셔츠룸 추천 BRO 피셜</title>
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Courier New', Courier, 'Noto Sans KR', monospace;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.5;
-            padding: 0 1rem;
-            position: relative;
-            min-height: 100vh;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 2px, transparent 2px, transparent 6px),
-                        repeating-linear-gradient(0deg, rgba(255, 215, 0, 0.02) 0px, rgba(255, 215, 0, 0.02) 2px, transparent 2px, transparent 8px);
-            pointer-events: none;
-            z-index: 0;
-        }
-        a {
-            color: #ffd700;
-            text-decoration: underline wavy;
-            transition: color 0.2s, background 0.2s;
-        }
-        a:hover, a:focus {
-            color: #0f0;
-            background: #222;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            color: #ffd700;
-            border-bottom: 4px solid #ffd700;
-            padding-bottom: 0.2em;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 0 #000;
-            line-height: 1.1;
-        }
-        h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #ffd700;
-            border-left: 6px solid #ffd700;
-            padding-left: 0.5em;
-            margin: 2rem 0 1rem;
-            text-transform: uppercase;
-        }
-        h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #ccc;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            color: #d0d0d0;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 1;
-        }
-        header {
-            background: #111;
-            padding: 1.5rem 0;
-            border-bottom: 3px solid #ffd700;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        header h1 {
-            font-size: 1.2rem;
-            margin: 0;
-            border: none;
-            padding: 0;
-            text-shadow: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        nav a {
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            padding: 0.3rem 0.6rem;
-            border: 1px solid #ffd700;
-            background: #1a1a1a;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background: #ffd700;
-            color: #000;
-        }
-        .tel-link {
-            display: inline-block;
-            background: #ffd700;
-            color: #000;
-            padding: 0.5rem 1rem;
-            font-weight: 900;
-            border: none;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        .tel-link:hover {
-            background: #0f0;
-            color: #000;
-        }
-        /* hero */
-        .hero {
-            background: #222;
-            padding: 3rem 1.5rem;
-            border: 3px solid #ffd700;
-            margin: 2rem 0;
-            position: relative;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            border: none;
-            padding: 0;
-            margin: 0 0 1rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 80%;
-        }
-        /* cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background: #1e1e1e;
-            border: 2px solid #333;
-            padding: 1.5rem;
-            transition: border-color 0.3s;
-        }
-        .card:hover {
-            border-color: #ffd700;
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #ffd700;
-        }
-        .card p {
-            font-size: 0.95rem;
-        }
-        .card .meta {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 0.5rem;
-            border-top: 1px solid #333;
-            padding-top: 0.5rem;
-        }
-        .read-more {
-            display: inline-block;
-            margin-top: 0.5rem;
-            background: #ffd700;
-            color: #000;
-            padding: 0.3rem 0.8rem;
-            font-weight: bold;
-            text-decoration: none;
-            border: 1px solid #ffd700;
-        }
-        .read-more:hover {
-            background: #0f0;
-            color: #000;
-            border-color: #0f0;
-        }
-        /* faq */
-        .faq {
-            margin: 2rem 0;
-            padding: 2rem 0;
-            border-top: 3px solid #ffd700;
-            border-bottom: 3px solid #ffd700;
-        }
-        .faq details {
-            margin-bottom: 1rem;
-            background: #1e1e1e;
-            padding: 1rem;
-            border: 1px solid #333;
-        }
-        .faq summary {
-            font-weight: 700;
-            cursor: pointer;
-            color: #ffd700;
-            font-size: 1.1rem;
-        }
-        .faq p {
-            margin-top: 0.5rem;
-            padding-left: 0.5rem;
-            border-left: 3px solid #ffd700;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #666;
-            font-size: 0.8rem;
-            border-top: 1px solid #333;
-            margin-top: 3rem;
-        }
-        .hamburger {
-            display: none;
-            background: none;
-            border: 2px solid #ffd700;
-            color: #ffd700;
-            font-size: 1.5rem;
-            padding: 0.3rem 0.6rem;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            .hero h2 { font-size: 1.8rem; }
-            .hero p { max-width: 100%; }
-            nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background: #111;
-                padding: 1rem;
-                border: 2px solid #ffd700;
-                margin-top: 0.5rem;
-            }
-            nav ul.open {
-                display: flex;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
-    </style>
-  <link rel="canonical" href="https://airport-review-shirt.hardcoreroom.com/blog.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+ <meta name="description" content="공항 셔츠룸 추천 브루탈리즘 블로그. BRO 피셜, 가짜 리뷰는 없다. 인천 셔츠룸 실전 분석.">
+ <meta name="keywords" content="공항 셔츠룸, 공항 셔츠룸 추천, 인천 셔츠룸, 셔츠룸 블로그, 셔츠룸 후기, bro 피셜, 셔츠룸 정보, 공항 유흥">
+ <meta property="og:title" content="블로그 · 공항 셔츠룸 추천 BRO 피셜">
+ <meta property="og:description" content="공항 셔츠룸 추천 브루탈리즘 블로그. BRO 피셜, 가짜 리뷰는 없다. 인천 셔츠룸 실전 분석.">
+ <meta property="og:url" content="https://airport-review-shirt.hardcoreroom.com/blog.html">
+ <title>블로그 · 공항 셔츠룸 추천 BRO 피셜</title>
+ <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Courier New', Courier, 'Noto Sans KR', monospace;
+ background: #1a1a1a;
+ color: #e0e0e0;
+ line-height: 1.5;
+ padding: 0 1rem;
+ position: relative;
+ min-height: 100vh;
+ }
+ body::before {
+ content: '';
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 2px, transparent 2px, transparent 6px),
+ repeating-linear-gradient(0deg, rgba(255, 215, 0, 0.02) 0px, rgba(255, 215, 0, 0.02) 2px, transparent 2px, transparent 8px);
+ pointer-events: none;
+ z-index: 0;
+ }
+ a {
+ color: #ffd700;
+ text-decoration: underline wavy;
+ transition: color 0.2s, background 0.2s;
+ }
+ a:hover, a:focus {
+ color: #0f0;
+ background: #222;
+ }
+ h1 {
+ font-size: 3rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ color: #ffd700;
+ border-bottom: 4px solid #ffd700;
+ padding-bottom: 0.2em;
+ margin-bottom: 1rem;
+ text-shadow: 2px 2px 0 #000;
+ line-height: 1.1;
+ }
+ h2 {
+ font-size: 2rem;
+ font-weight: 800;
+ color: #ffd700;
+ border-left: 6px solid #ffd700;
+ padding-left: 0.5em;
+ margin: 2rem 0 1rem;
+ text-transform: uppercase;
+ }
+ h3 {
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #ccc;
+ margin-top: 1.5rem;
+ margin-bottom: 0.5rem;
+ }
+ p {
+ margin-bottom: 1rem;
+ font-size: 1rem;
+ color: #d0d0d0;
+ }
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 1rem;
+ position: relative;
+ z-index: 1;
+ }
+ header {
+ background: #111;
+ padding: 1.5rem 0;
+ border-bottom: 3px solid #ffd700;
+ margin-bottom: 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ header h1 {
+ font-size: 1.2rem;
+ margin: 0;
+ border: none;
+ padding: 0;
+ text-shadow: none;
+ }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 1rem;
+ flex-wrap: wrap;
+ }
+ nav a {
+ font-weight: 700;
+ text-transform: uppercase;
+ font-size: 0.85rem;
+ padding: 0.3rem 0.6rem;
+ border: 1px solid #ffd700;
+ background: #1a1a1a;
+ text-decoration: none;
+ }
+ nav a:hover {
+ background: #ffd700;
+ color: #000;
+ }
+ .tel-link {
+ display: inline-block;
+ background: #ffd700;
+ color: #000;
+ padding: 0.5rem 1rem;
+ font-weight: 900;
+ border: none;
+ text-decoration: none;
+ font-size: 1.2rem;
+ }
+ .tel-link:hover {
+ background: #0f0;
+ color: #000;
+ }
+ /* hero */
+ .hero {
+ background: #222;
+ padding: 3rem 1.5rem;
+ border: 3px solid #ffd700;
+ margin: 2rem 0;
+ position: relative;
+ }
+ .hero h2 {
+ font-size: 2.5rem;
+ border: none;
+ padding: 0;
+ margin: 0 0 1rem;
+ }
+ .hero p {
+ font-size: 1.1rem;
+ max-width: 80%;
+ }
+ /* cards */
+ .cards {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 1.5rem;
+ margin: 2rem 0;
+ }
+ .card {
+ background: #1e1e1e;
+ border: 2px solid #333;
+ padding: 1.5rem;
+ transition: border-color 0.3s;
+ }
+ .card:hover {
+ border-color: #ffd700;
+ }
+ .card h3 {
+ margin-top: 0;
+ color: #ffd700;
+ }
+ .card p {
+ font-size: 0.95rem;
+ }
+ .card .meta {
+ font-size: 0.8rem;
+ color: #888;
+ margin-top: 0.5rem;
+ border-top: 1px solid #333;
+ padding-top: 0.5rem;
+ }
+ .read-more {
+ display: inline-block;
+ margin-top: 0.5rem;
+ background: #ffd700;
+ color: #000;
+ padding: 0.3rem 0.8rem;
+ font-weight: bold;
+ text-decoration: none;
+ border: 1px solid #ffd700;
+ }
+ .read-more:hover {
+ background: #0f0;
+ color: #000;
+ border-color: #0f0;
+ }
+ /* faq */
+ .faq {
+ margin: 2rem 0;
+ padding: 2rem 0;
+ border-top: 3px solid #ffd700;
+ border-bottom: 3px solid #ffd700;
+ }
+ .faq details {
+ margin-bottom: 1rem;
+ background: #1e1e1e;
+ padding: 1rem;
+ border: 1px solid #333;
+ }
+ .faq summary {
+ font-weight: 700;
+ cursor: pointer;
+ color: #ffd700;
+ font-size: 1.1rem;
+ }
+ .faq p {
+ margin-top: 0.5rem;
+ padding-left: 0.5rem;
+ border-left: 3px solid #ffd700;
+ }
+ footer {
+ text-align: center;
+ padding: 2rem 0;
+ color: #666;
+ font-size: 0.8rem;
+ border-top: 1px solid #333;
+ margin-top: 3rem;
+ }
+ .hamburger {
+ display: none;
+ background: none;
+ border: 2px solid #ffd700;
+ color: #ffd700;
+ font-size: 1.5rem;
+ padding: 0.3rem 0.6rem;
+ cursor: pointer;
+ }
+ @media (max-width: 768px) {
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.5rem; }
+ .hero h2 { font-size: 1.8rem; }
+ .hero p { max-width: 100%; }
+ nav ul {
+ display: none;
+ flex-direction: column;
+ width: 100%;
+ background: #111;
+ padding: 1rem;
+ border: 2px solid #ffd700;
+ margin-top: 0.5rem;
+ }
+ nav ul.open {
+ display: flex;
+ }
+ .hamburger {
+ display: block;
+ }
+ }
+ </style>
+ <link rel="canonical" href="https://airport-review-shirt.hardcoreroom.com/blog.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>BRO 피셜 · 블로그</h1>
-            <nav>
-                <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
-                <ul>
-                    <li><a href="/">홈</a></li>
-                    <li><a href="/blog">블로그</a></li>
-                    <li><a href="tel:010-6279-0862" class="tel-link">전화 010-6279-0862</a></li>
-                </ul>
-            </nav>
-        </header>
+ <div class="container">
+ <header>
+ <h1>BRO 피셜 · 블로그</h1>
+ <nav>
+ <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/blog">블로그</a></li>
+ 
+ </ul>
+ </nav>
+ </header>
 
-        <!-- HERO -->
-        <div class="hero">
-            <h2>📢 블로그 · 진짜 리뷰만 때려박는다</h2>
-            <p>BRO 피셜. 공항 셔츠룸 추천 정보를 거르지 않고 직구로 전달한다. 가식적인 광고는 없다. 오직 내가 직접 확인한 사실만.</p>
-        </div>
+ <!-- HERO -->
+ <div class="hero">
+ <h2>📢 블로그 · 진짜 리뷰만 때려박는다</h2>
+ <p>BRO 피셜. 공항 셔츠룸 추천 정보를 거르지 않고 직구로 전달한다. 가식적인 광고는 없다. 오직 내가 직접 확인한 사실만.</p>
+ </div>
 
-        <!-- 블로그 포스트 카드 (정보성 글 1편) -->
-        <div class="cards">
-            <div class="card">
-                <h3>공항 셔츠룸 추천, 왜 내가 까발리냐면</h3>
-                <p>지난주 인천공항 근처 셔츠룸 4곳을 돌았다. 연예인급 매니저, 시설, 가격, 서비스. 모든 걸 내 기준으로 평가했다. 결론: 니가 생각하는 그런 곳이랑은 다르다.</p>
-                <p>첫째, 가성비. 20만 원대로 프리미엄 급 매니저를 만날 수 있는 곳은 단 한 곳뿐이었다. 둘째, 시설. 샤워실, 라운지, 룸 컨디션. 일부는 숙소 수준이었고, 일부는 그냥 그랬다. 셋째, 진심. 매니저의 태도와 서비스 마인드. 이게 가장 중요하다.</p>
-                <p>자세한 후기는 전화로만 알려준다. 블로그에 다 쓰면 업계에서 쫓겨난다. 전화 010-6279-0862. 형이 직접 알려준다.</p>
-                <div class="meta">2025.03.21 · by BRO · 댓글 12</div>
-                <a href="tel:010-6279-0862" class="read-more">전화로 더 보기</a>
-            </div>
-        </div>
+ <!-- 블로그 포스트 카드 (정보성 글 1편) -->
+ <div class="cards">
+ <div class="card">
+ <h3>공항 셔츠룸 추천, 왜 내가 까발리냐면</h3>
+ <p>지난주 인천공항 근처 셔츠룸 4곳을 돌았다. 연예인급 매니저, 시설, 가격, 서비스. 모든 걸 내 기준으로 평가했다. 결론: 니가 생각하는 그런 곳이랑은 다르다.</p>
+ <p>첫째, 가성비. 20만 원대로 프리미엄 급 매니저를 만날 수 있는 곳은 단 한 곳뿐이었다. 둘째, 시설. 샤워실, 라운지, 룸 컨디션. 일부는 숙소 수준이었고, 일부는 그냥 그랬다. 셋째, 진심. 매니저의 태도와 서비스 마인드. 이게 가장 중요하다.</p>
+ <p>자세한 후기는 전화로만 알려준다. 블로그에 다 쓰면 업계에서 쫓겨난다. 형이 직접 알려준다.</p>
+ <div class="meta">2025.03.21 · by BRO · 댓글 12</div>
+ 
+ </div>
+ </div>
 
-        <!-- FAQ -->
-        <div class="faq">
-            <h2>💬 블로그 FAQ</h2>
-            <details>
-                <summary>블로그에 왜 전화번호만 덜렁 있어?</summary>
-                <p>세부 정보는 전화로만 공개한다. 블로그에서 다 적으면 업계 관계자들이 따라한다. 내가 추천하는 곳만 골라서 전화로 알려준다.</p>
-            </details>
-            <details>
-                <summary>정보가 진짜인지 어떻게 믿어?</summary>
-                <p>내가 직접 가보고 쓴 글이다. 거짓말하면 내 이름 BRO 안 쓴다. 의심되면 전화해라. 증거 보여준다.</p>
-            </details>
-            <details>
-                <summary>공항 셔츠룸 말고 다른 지역은?</summary>
-                <p>지금은 공항 쪽만 집중한다. 인천, 영종도, 운서동 위주. 다른 지역 필요하면 전화로 물어봐라.</p>
-            </details>
-        </div>
+ <!-- FAQ -->
+ <div class="faq">
+ <h2>💬 블로그 FAQ</h2>
+ <details>
+ <summary>블로그에 왜 전화번호만 덜렁 있어?</summary>
+ <p>세부 정보는 전화로만 공개한다. 블로그에서 다 적으면 업계 관계자들이 따라한다. 내가 추천하는 곳만 골라서 전화로 알려준다.</p>
+ </details>
+ <details>
+ <summary>정보가 진짜인지 어떻게 믿어?</summary>
+ <p>내가 직접 가보고 쓴 글이다. 거짓말하면 내 이름 BRO 안 쓴다. 의심되면 전화해라. 증거 보여준다.</p>
+ </details>
+ <details>
+ <summary>공항 셔츠룸 말고 다른 지역은?</summary>
+ <p>지금은 공항 쪽만 집중한다. 인천, 영종도, 운서동 위주. 다른 지역 필요하면 전화로 물어봐라.</p>
+ </details>
+ </div>
 
-        <footer>
-            <p>© 2025 BRO 피셜 · 공항 셔츠룸 추천 · 전화 010-6279-0862</p>
-            <p>본 블로그는 정보 제공 목적이며, 실제 방문 전 반드시 전화로 확인하세요.</p>
-        </footer>
-    </div>
-    <script>
-        // 모바일 햄버거 메뉴 제어
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            const nav = document.querySelector('nav ul');
-            nav.classList.toggle('open');
-        });
-    </script>
+ <footer>
+ <p>© 2025 BRO 피셜, 공항 셔츠룸 추천</p>
+ <p>본 블로그는 정보 제공 목적이며, 실제 방문 전 반드시 전화로 확인하세요.</p>
+ </footer>
+ </div>
+ <script>
+ // 모바일 햄버거 메뉴 제어
+ document.querySelector('.hamburger').addEventListener('click', function() {
+ const nav = document.querySelector('nav ul');
+ nav.classList.toggle('open');
+ });
+ </script>
 </body>
 </html>
